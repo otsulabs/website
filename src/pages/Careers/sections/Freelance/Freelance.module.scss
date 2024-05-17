@@ -1,0 +1,119 @@
+@use 'sass:math';
+@import '/src/scss/mixins';
+@import '/src/scss/style.scss';
+
+.freelance {
+  margin: rem(200) 0;
+
+  @media (max-width: $tablet) {
+    margin: rem(100) 0;
+  }
+
+  &Body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      justify-content: unset;
+      gap: rem(0);
+      padding: 0 0 rem(400);
+    }
+  }
+
+  &Content {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      margin: rem(16) 0 rem(232);
+
+      @media (max-width: $tablet) {
+        margin: rem(16) 0 0;
+      }
+    }
+    &__bottom {
+      margin: auto 0 0;
+      @media (max-width: $tablet) {
+        margin: 0;
+      }
+
+      &Title {
+      }
+      &Mail {
+        margin: rem(8) 0 0;
+        @media (max-width: $tablet) {
+          margin: rem(6) 0 0;
+        }
+
+        div {
+          transition: all $time $tr;
+        }
+        &:hover {
+          div {
+            // color: cl(text-secondary);
+          }
+        }
+      }
+    }
+  }
+
+  &Image {
+    position: absolute;
+    right: rem(20);
+    top: rem(-275);
+
+    width: rem(1228);
+    height: rem(974);
+
+    @media (max-width: $tablet) {
+      right: rem(-15);
+      top: auto;
+      bottom: 0;
+
+      width: rem(453);
+      height: rem(359);
+    }
+
+    pointer-events: none;
+    user-select: none;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &Images {
+    display: flex;
+    gap: rem(30);
+
+    @media (max-width: $tablet) {
+      margin: rem(32) 0;
+    }
+
+    &__img {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &.min {
+        width: rem(236);
+        height: rem(236);
+      }
+      &.big {
+        width: rem(915);
+        height: rem(540);
+
+        @media (max-width: $tablet) {
+          width: 100%;
+          height: rem(328);
+        }
+      }
+    }
+  }
+}
