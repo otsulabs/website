@@ -33,7 +33,7 @@ const content = {
         'Character Development and Design, Script, Concept art, Background art, Storyboard, Color Script, Full Production, Sound Design, Voice Acting, Visual Effects.',
       mobileDescription:
         'Zokio by VoyceMe  //  Character Development and Design, Script, Concept art, Background art, Storyboard, Color Script, Full Production, Sound Design, Voice Acting, Visual Effects.',
-      to: '/projects/system_royale_art_1',
+      to: '/projects/system_royale_part_1',
     },
     {
       video: siteContent.projectsVideo.systemRPart_2,
@@ -46,7 +46,7 @@ const content = {
         'Character Development and Design, Script, Storyboard, Color Script, Full Production, Post-Production, Sound Design, Voice Acting, Visual Effects.',
       mobileDescription:
         'Zokio by VoyceMe  //  Character Development and Design, Script, Storyboard, Color Script, Full Production, Post-Production, Sound Design, Voice Acting, Visual Effects.',
-      to: '/projects/system_royale_art_2',
+      to: '/projects/system_royale_part_2',
     },
     {
       video: siteContent.projectsVideo.theDopeShitTypeSlash,

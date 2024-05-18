@@ -41,15 +41,21 @@ const ProjectsSection = () => {
         >
           <SwiperSlide className={style.projectsSlider__slide}>
             <VideoCard
+              to={'projects/the_wrath_of_gods'}
               video={siteContent.projectsVideo.theWrathOfGods}
               title={'The Wrath of Gods'}
             />
           </SwiperSlide>
           <SwiperSlide className={style.projectsSlider__slide}>
-            <VideoCard video={siteContent.projectsVideo.eris} title={'Eris'} />
+            <VideoCard
+              to={'projects/eris'}
+              video={siteContent.projectsVideo.eris}
+              title={'Eris'}
+            />
           </SwiperSlide>
           <SwiperSlide className={style.projectsSlider__slide}>
             <VideoCard
+              to={'projects/the_book_of_nouns'}
               video={siteContent.projectsVideo.theBookOfNouns}
               title={'The Book of nouns'}
             />
@@ -64,7 +70,7 @@ const ProjectsSection = () => {
   );
 };
 
-const VideoCard = ({ video, title }) => {
+const VideoCard = ({ video, title, to }) => {
   const videoRef = useRef();
 
   const playVideo = () => {
@@ -81,7 +87,7 @@ const VideoCard = ({ video, title }) => {
 
   return (
     <Link
-      to={'projects/item'}
+      to={to}
       className={style.slide}
       onMouseEnter={playVideo}
       onMouseLeave={pauseVideo}

@@ -57,11 +57,11 @@ const router = createBrowserRouter([
         element: <TheWrathOfGods />,
       },
       {
-        path: 'projects/system_royale_art_1',
+        path: 'projects/system_royale_part_1',
         element: <SystemRoyalePart1 />,
       },
       {
-        path: 'projects/system_royale_art_2',
+        path: 'projects/system_royale_part_2',
         element: <SystemRoyalePart2 />,
       },
       {
