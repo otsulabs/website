@@ -1,3 +1,10 @@
+import preview1 from './pages/projectList/TheWrathOfGods/sections/Content/assets/preview.jpg';
+import preview2 from './pages/projectList/SystemRoyalePart_1/sections/Content/assets/preview.jpg';
+import preview3 from './pages/projectList/SystemRoyalePart_2/sections/Content/assets/preview.jpg';
+import preview4 from './pages/projectList/TheDopeShtTypeSlash/sections/Content/assets/preview.jpg';
+import preview5 from './pages/projectList/Eris/sections/Content/assets/preview.jpg';
+import preview6 from './pages/projectList/TheBookOfNouns/sections/Content/assets/preview.jpg';
+
 const mainInstagram = 'https://www.instagram.com/otsulabs/';
 const mainTwitter = 'https://twitter.com/OtsuLabs';
 
@@ -64,6 +71,14 @@ export const siteContent = {
   },
   contacts: {
     email: 'contact@otsulabs.com',
+  },
+  projectsPreview: {
+    theWrathOfGods: preview1,
+    eris: preview5,
+    theBookOfNouns: preview6,
+    theDopeShitTypeSlash: preview4,
+    systemRPart_1: preview2,
+    systemRPart_2: preview3,
   },
   projectsVideo: {
     theWrathOfGods:

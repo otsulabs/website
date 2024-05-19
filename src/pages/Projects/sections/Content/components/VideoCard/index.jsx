@@ -3,7 +3,16 @@ import Text from '../../../../../../components/Text';
 import style from './VideoCard.module.scss';
 import { useEffect, useRef } from 'react';
 
-const VideoCard = ({ img, video, title, user, userType, className, to }) => {
+const VideoCard = ({
+  img,
+  video,
+  title,
+  user,
+  userType,
+  className,
+  to,
+  preview,
+}) => {
   const videoRef = useRef();
 
   const playVideo = () => {
@@ -39,6 +48,12 @@ const VideoCard = ({ img, video, title, user, userType, className, to }) => {
           />
         )}
         {img && <img src={img} alt='' />}
+
+        {preview && (
+          <div className={style.card__videoPreview}>
+            <img src={preview} alt='' />
+          </div>
+        )}
       </div>
       <div className={style.cardInfo}>
         <div className={style.cardInfo__row}>

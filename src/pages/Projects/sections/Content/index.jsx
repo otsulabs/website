@@ -51,6 +51,7 @@ const ContentSection = ({ isListType }) => {
             {content.cards.map((item, index) => (
               <VideoCard
                 key={index}
+                preview={item.preview}
                 video={item.video}
                 title={item.title}
                 user={item.user}

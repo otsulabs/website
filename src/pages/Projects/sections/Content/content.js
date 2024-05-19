@@ -1,15 +1,9 @@
-// import video1 from '../../../projectList/TheWrathOfGods/sections/Content/assets/video/video.mp4';
-// import video2 from '../../../projectList/SystemRoyalePart_1/sections/Content/assets/video/video.mp4';
-// import video3 from '../../../projectList/SystemRoyalePart_2/sections/Content/assets/video/video.mp4';
-// import video4 from '../../../projectList/TheDopeShtTypeSlash/sections/Content/assets/video/video.mp4';
-// import video5 from '../../../projectList/Eris/sections/Content/assets/video/video.mp4';
-// import video6 from '../../../projectList/TheBookOfNouns/sections/Content/assets/video/video.mp4';
-
 import { siteContent } from '../../../../content';
 
 const content = {
   cards: [
     {
+      preview: siteContent.projectsPreview.theWrathOfGods,
       video: siteContent.projectsVideo.theWrathOfGods,
       title: 'The Wrath of Gods',
       user: 'Roolz',
@@ -23,6 +17,7 @@ const content = {
       to: '/projects/the_wrath_of_gods',
     },
     {
+      preview: siteContent.projectsPreview.systemRPart_1,
       video: siteContent.projectsVideo.systemRPart_1,
       title: 'System Royale - Part 1',
       user: 'Zokio by VoyceMe',
@@ -36,6 +31,7 @@ const content = {
       to: '/projects/system_royale_part_1',
     },
     {
+      preview: siteContent.projectsPreview.systemRPart_2,
       video: siteContent.projectsVideo.systemRPart_2,
       title: 'System Royale - Part 2',
       user: 'Zokio by VoyceMe',
@@ -49,6 +45,7 @@ const content = {
       to: '/projects/system_royale_part_2',
     },
     {
+      preview: siteContent.projectsPreview.theDopeShitTypeSlash,
       video: siteContent.projectsVideo.theDopeShitTypeSlash,
       title: 'The dope sh*t-type slash',
       user: 'Alex Hugh',
@@ -62,6 +59,7 @@ const content = {
       to: '/projects/the_dope_sht_type_slash',
     },
     {
+      preview: siteContent.projectsPreview.eris,
       video: siteContent.projectsVideo.eris,
       title: 'Eris',
       user: 'Conviction',
@@ -75,6 +73,7 @@ const content = {
       to: '/projects/eris',
     },
     {
+      preview: siteContent.projectsPreview.theBookOfNouns,
       video: siteContent.projectsVideo.theBookOfNouns,
       title: 'The Book of Nouns',
       user: '',

@@ -42,6 +42,7 @@ const ProjectsSection = () => {
           <SwiperSlide className={style.projectsSlider__slide}>
             <VideoCard
               to={'projects/the_wrath_of_gods'}
+              preview={siteContent.projectsPreview.theWrathOfGods}
               video={siteContent.projectsVideo.theWrathOfGods}
               title={'The Wrath of Gods'}
             />
@@ -49,6 +50,7 @@ const ProjectsSection = () => {
           <SwiperSlide className={style.projectsSlider__slide}>
             <VideoCard
               to={'projects/eris'}
+              preview={siteContent.projectsPreview.eris}
               video={siteContent.projectsVideo.eris}
               title={'Eris'}
             />
@@ -56,6 +58,7 @@ const ProjectsSection = () => {
           <SwiperSlide className={style.projectsSlider__slide}>
             <VideoCard
               to={'projects/the_book_of_nouns'}
+              preview={siteContent.projectsPreview.theBookOfNouns}
               video={siteContent.projectsVideo.theBookOfNouns}
               title={'The Book of nouns'}
             />
@@ -70,7 +73,7 @@ const ProjectsSection = () => {
   );
 };
 
-const VideoCard = ({ video, title, to }) => {
+const VideoCard = ({ preview, video, title, to }) => {
   const videoRef = useRef();
 
   const playVideo = () => {
@@ -101,6 +104,11 @@ const VideoCard = ({ video, title, to }) => {
           playsinline
           src={`${video}#t=0.1`}
         ></video>
+        {preview && (
+          <div className={style.projectsSlider__imgPreview}>
+            <img src={preview} alt='' />
+          </div>
+        )}
       </div>
       <div className={style.projectsSlider__title}>{title}</div>
     </Link>

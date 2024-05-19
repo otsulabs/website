@@ -10,7 +10,15 @@
     padding: rem(15);
   }
 
+  &:hover {
+    .card__videoPreview {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
   &__video {
+    position: relative;
     width: 100%;
     height: rem(330);
 
@@ -24,6 +32,15 @@
       height: 100%;
       object-fit: cover;
       pointer-events: none;
+    }
+
+    &Preview {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      user-select: none;
+
+      transition: all $time $tr;
     }
   }
   &Info {

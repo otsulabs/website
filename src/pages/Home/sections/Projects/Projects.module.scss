@@ -36,6 +36,13 @@
         width: rem(303) !important;
       }
 
+      &:hover {
+        .projectsSlider__imgPreview {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+
       // filter: grayscale(1);
       // transition: all $time $tr;
 
@@ -52,6 +59,15 @@
 
       @media (max-width: $tablet) {
         height: rem(230);
+      }
+
+      &Preview {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        user-select: none;
+
+        transition: all $time $tr;
       }
 
       img,
