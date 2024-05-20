@@ -43,7 +43,7 @@ const ProjectsSection = () => {
             <VideoCard
               to={'projects/the_wrath_of_gods'}
               preview={siteContent.projectsPreview.theWrathOfGods}
-              video={siteContent.projectsVideo.theWrathOfGods}
+              video={siteContent.projectsVideo360Quality.theWrathOfGods}
               title={'The Wrath of Gods'}
             />
           </SwiperSlide>
@@ -51,7 +51,7 @@ const ProjectsSection = () => {
             <VideoCard
               to={'projects/eris'}
               preview={siteContent.projectsPreview.eris}
-              video={siteContent.projectsVideo.eris}
+              video={siteContent.projectsVideo360Quality.eris}
               title={'Eris'}
             />
           </SwiperSlide>
@@ -59,7 +59,7 @@ const ProjectsSection = () => {
             <VideoCard
               to={'projects/the_book_of_nouns'}
               preview={siteContent.projectsPreview.theBookOfNouns}
-              video={siteContent.projectsVideo.theBookOfNouns}
+              video={siteContent.projectsVideo360Quality.theBookOfNouns}
               title={'The Book of nouns'}
             />
           </SwiperSlide>

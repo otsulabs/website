@@ -4,6 +4,7 @@ const content = {
   cards: [
     {
       preview: siteContent.projectsPreview.theWrathOfGods,
+      videoPreview: siteContent.projectsVideo360Quality.theWrathOfGods,
       video: siteContent.projectsVideo.theWrathOfGods,
       title: 'The Wrath of Gods',
       user: 'Roolz',
@@ -18,6 +19,7 @@ const content = {
     },
     {
       preview: siteContent.projectsPreview.systemRPart_1,
+      videoPreview: siteContent.projectsVideo360Quality.systemRPart_1,
       video: siteContent.projectsVideo.systemRPart_1,
       title: 'System Royale - Part 1',
       user: 'Zokio by VoyceMe',
@@ -32,6 +34,7 @@ const content = {
     },
     {
       preview: siteContent.projectsPreview.systemRPart_2,
+      videoPreview: siteContent.projectsVideo360Quality.systemRPart_2,
       video: siteContent.projectsVideo.systemRPart_2,
       title: 'System Royale - Part 2',
       user: 'Zokio by VoyceMe',
@@ -46,6 +49,7 @@ const content = {
     },
     {
       preview: siteContent.projectsPreview.theDopeShitTypeSlash,
+      videoPreview: siteContent.projectsVideo360Quality.theDopeShitTypeSlash,
       video: siteContent.projectsVideo.theDopeShitTypeSlash,
       title: 'The dope sh*t-type slash',
       user: 'Alex Hugh',
@@ -60,6 +64,7 @@ const content = {
     },
     {
       preview: siteContent.projectsPreview.eris,
+      videoPreview: siteContent.projectsVideo360Quality.eris,
       video: siteContent.projectsVideo.eris,
       title: 'Eris',
       user: 'Conviction',
@@ -74,6 +79,7 @@ const content = {
     },
     {
       preview: siteContent.projectsPreview.theBookOfNouns,
+      videoPreview: siteContent.projectsVideo360Quality.theBookOfNouns,
       video: siteContent.projectsVideo.theBookOfNouns,
       title: 'The Book of Nouns',
       user: '',

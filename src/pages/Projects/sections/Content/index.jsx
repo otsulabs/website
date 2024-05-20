@@ -52,7 +52,7 @@ const ContentSection = ({ isListType }) => {
               <VideoCard
                 key={index}
                 preview={item.preview}
-                video={item.video}
+                video={item.videoPreview}
                 title={item.title}
                 user={item.user}
                 userType={item.userType}
