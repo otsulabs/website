@@ -1,21 +1,45 @@
-import { useForm } from 'react-hook-form';
+import { useForm, FormProvider } from 'react-hook-form';
 import Button from '../../components/Button';
 import File from '../../components/File';
 import Input from '../../components/Input';
 import style from './Form.module.scss';
 import { useEffect, useRef, useState } from 'react';
+const baseUrl = process.env.API_URL || 'https://otsulabs-serverless.vercel.app';
 
-const Form = ({ className }) => {
+const Form = ({ className, type }) => {
   const [fileName, setFileName] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [isSent, setIsSent] = useState(false);
 
   const fileInputRef = useRef();
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const methods = useForm();
+  const onSubmit = async (data) => {
+    if (!type || isSent) return
+
+    const formData = new FormData();
+    formData.append('name', data.name);
+    formData.append('email', data.email);
+    formData.append('type', type);
+    formData.append('message', data.message);
+    formData.append('attachment', fileInputRef.current.files[0]);
+    setLoading(true);
+    fetch(`${baseUrl}/contact`, {
+      method: 'POST',
+      body: formData,
+    }).then(async (response) => {
+      const responseParsed = await response.json();
+      if (responseParsed.success) {
+        setIsSent(true);
+        methods.reset();
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+    .finally(() => {
+      setLoading(false);
+    })
+  };
 
   const [disabledInput, setDisabledInput] = useState(false);
   const handleFileInputName = () => {
@@ -36,34 +60,43 @@ const Form = ({ className }) => {
   }, [fileName]);
 
   return (
-    <form
-      action=''
-      onSubmit={handleSubmit(onSubmit)}
-      className={`${style.form} ${className}`}
-    >
-      <div className={style.form__row}>
+    <FormProvider {...methods}>
+      <form
+        action=''
+        onSubmit={methods.handleSubmit(onSubmit)}
+        className={`${style.form} ${className}`}
+      >
+        <div className={style.form__row}>
+          <Input
+            placeholder={'Your Name'}
+            name={'name'}
+            rules={{ required: true }}
+            error={methods.formState.errors.name}
+            />
+          <Input
+            placeholder={'Your Email'}
+            name={'email'}
+            rules={{ required: true }}
+            error={methods.formState.errors.email}
+          />
+        </div>
         <Input
-          placeholder={'Your Name'}
-          {...register('Name', { required: true, pattern: /^\S+@\S+$/i })}
-          error={errors.Name}
+          placeholder={'Write a message here'}
+          name={'message'}
+          rules={{}}
+          textarea
         />
-        <Input
-          placeholder={'Your Email'}
-          {...register('Email', { required: true })}
-          error={errors.Email}
+        <File
+          handleRemove={removeFileInput}
+          onChange={handleFileInputName}
+          refEl={fileInputRef}
+          className={style.form__file}
+          fileName={fileName}
+          disabledInput={disabledInput}
         />
-      </div>
-      <Input placeholder={'Write a message here'} textarea />
-      <File
-        handleRemove={removeFileInput}
-        onChange={handleFileInputName}
-        refEl={fileInputRef}
-        className={style.form__file}
-        fileName={fileName}
-        disabledInput={disabledInput}
-      />
-      <Button className={style.form__btn} title={'Send now'} />
-    </form>
+        <Button type="submit" loading={loading} className={style.form__btn} title={isSent ? 'Sent' : 'Send now'} />
+      </form>
+    </FormProvider>
   );
 };
 

@@ -145,7 +145,7 @@ const ContentSection = () => {
         <Block.Col>
           <Title.H4>
             <Title.Row>Fill in the forms and we will contact you</Title.Row>
-            <Form className={style.form} />
+            <Form type={'career'} className={style.form} />
           </Title.H4>
         </Block.Col>
       </Block.Base>

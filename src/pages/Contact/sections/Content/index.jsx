@@ -27,7 +27,7 @@ const Content = () => {
       </div>
       <div className={style.contentBody}>
         <div className={style.col}>
-          <Form />
+          <Form type={'contact'} />
         </div>
         {isTablet && (
           <div className={style.title}>
