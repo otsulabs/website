@@ -4,7 +4,7 @@ import File from '../../components/File';
 import Input from '../../components/Input';
 import style from './Form.module.scss';
 import { useEffect, useRef, useState } from 'react';
-const baseUrl = process.env.API_URL || 'https://otsulabs-serverless.vercel.app';
+const baseUrl = process.env.API_URL || 'http://localhost:3000';
 
 const Form = ({ className, type }) => {
   const [fileName, setFileName] = useState(false);
@@ -30,6 +30,7 @@ const Form = ({ className, type }) => {
       const responseParsed = await response.json();
       if (responseParsed.success) {
         setIsSent(true);
+        removeFileInput();
         methods.reset();
       }
     })
