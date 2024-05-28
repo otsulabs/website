@@ -34,6 +34,17 @@ const Title = {
       </h2>
     );
   },
+  H6: ({ children, className, lowerCase }) => {
+    return (
+      <h6
+        className={`${style.title} ${style.h6} 
+        ${lowerCase && style.lowerCase}
+         ${className}`}
+      >
+        {children}
+      </h6>
+    );
+  },
   Value: ({ children, className }) => {
     return (
       <h3 className={`${style.title} ${style.value}  ${className}`}>

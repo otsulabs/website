@@ -1,15 +1,18 @@
 import { useForm, FormProvider } from 'react-hook-form';
 import Button from '../../components/Button';
 import File from '../../components/File';
+import Title from '../../components/Title';
 import Input from '../../components/Input';
 import style from './Form.module.scss';
 import { useEffect, useRef, useState } from 'react';
-const baseUrl = process.env.API_URL || 'https://otsulabs-serverless.vercel.app';
+const baseUrl = process.env.API_URL || 'http://localhost:3000';
 
 const Form = ({ className, type }) => {
   const [fileName, setFileName] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
   const [isSent, setIsSent] = useState(false);
+  const fileAccepts = ['image/jpeg', 'image/jpg', 'application/pdf'];
 
   const fileInputRef = useRef();
   const methods = useForm();
@@ -30,29 +33,43 @@ const Form = ({ className, type }) => {
       const responseParsed = await response.json();
       if (responseParsed.success) {
         setIsSent(true);
+        setTimeout(() => {
+          setIsSent(false);
+        }, 2000);
         removeFileInput();
         methods.reset();
+        return;
       }
+      return Promise.reject(responseParsed.message);
     })
     .catch((error) => {
-      console.log(error);
+      setError(error);
     })
     .finally(() => {
       setLoading(false);
-    })
+    });
   };
 
   const [disabledInput, setDisabledInput] = useState(false);
   const handleFileInputName = () => {
-    setFileName(fileInputRef.current.files[0].name);
+    if (fileInputRef.current.files && fileInputRef.current.files[0]) {
+      const file = fileInputRef.current.files[0];
+      if (fileAccepts.includes(file.type)) {
+        setFileName(fileInputRef.current.files[0].name);
+        setError('');
+      } else {
+        setError('Please select correct file format(.jpg, png, pdf)');
+      }
+    }
   };
   const removeFileInput = () => {
     if (fileName) {
       setFileName(false);
       fileInputRef.current.value = '';
-      let newControl = fileInputRef.current.cloneNode(true);
-      fileInputRef.current.replaceWith(newControl);
-      fileInputRef.current = newControl;
+      // let newControl = fileInputRef.current.cloneNode(true);
+      // fileInputRef.current.replaceWith(newControl);
+      // fileInputRef.current = newControl;
+      setError('');
     }
   };
 
@@ -65,7 +82,7 @@ const Form = ({ className, type }) => {
       <form
         action=''
         onSubmit={methods.handleSubmit(onSubmit)}
-        className={`${style.form} ${className}`}
+        className={`${style.form} ${className} ${style['small-margin-bottom']} ${error ? style.error : ''}`}
       >
         <div className={style.form__row}>
           <Input
@@ -91,12 +108,25 @@ const Form = ({ className, type }) => {
           handleRemove={removeFileInput}
           onChange={handleFileInputName}
           refEl={fileInputRef}
+          accept={fileAccepts.join(', ')}
           className={style.form__file}
           fileName={fileName}
           disabledInput={disabledInput}
         />
-        <Button type="submit" loading={loading} className={style.form__btn} title={isSent ? 'Sent' : 'Send now'} />
+        {/* {
+          error && <Title.H6>
+            <Title.Row>
+              {error}
+            </Title.Row>
+          </Title.H6>
+        } */}
+        <Button type="submit" className={style.form__btn} title={'Send now'} />
       </form>
+      <Title.H6>
+        <Title.Row>
+          { loading ? 'Sending...' : isSent ? 'Thank you for reaching out! We will be in touch shortly.' : error ? error : '' }
+        </Title.Row>
+      </Title.H6>
     </FormProvider>
   );
 };

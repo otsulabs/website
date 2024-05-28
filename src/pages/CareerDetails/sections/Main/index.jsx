@@ -3,7 +3,7 @@ import Text from '../../../../components/Text';
 import Title from '../../../../components/Title';
 import style from './Main.module.scss';
 
-const MainSection = () => {
+const MainSection = ({ job }) => {
   return (
     <section className={style.main}>
       <div className='__container'>
@@ -16,7 +16,7 @@ const MainSection = () => {
             </PageInfo.Col>
             <PageInfo.Col>
               <Title.H2>
-                <Title.Row>2D Animation Director</Title.Row>
+                <Title.Row>{job.title}</Title.Row>
               </Title.H2>
             </PageInfo.Col>
           </PageInfo.Row>

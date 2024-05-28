@@ -43,6 +43,14 @@
     }
   }
 
+  &.h6 {
+    font-size: rem(18);
+
+    @media (max-width: $tablet) {
+      font-size: rem(14);
+    }
+  }
+
   &.value {
     font-weight: 500;
     font-size: rem(70);

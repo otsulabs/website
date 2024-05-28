@@ -10,15 +10,13 @@ const Button = ({
   icon,
   href,
   onClick,
-  to,
-  loading
+  to
 }) => {
   const cls = `
    ${style.button}  
    ${light && style.light} 
    ${social && style.social}    
-   ${className}
-   ${loading && style.loading}`;
+   ${className}`;
 
   return href ? (
     <a href={href} target='_blank' rel='noreferrer' className={cls}>
@@ -40,9 +38,6 @@ const Button = ({
     <button onClick={onClick} className={cls}>
       <div className={style.circle}></div>
       <span>
-        {
-          loading ? <Spinner size={8} /> : ''
-        }
         {title}
         {icon}
       </span>
