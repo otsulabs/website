@@ -82,7 +82,7 @@ export const siteContent = {
   },
   projectsVideo: {
     theWrathOfGods:
-      'https://player.vimeo.com/progressive_redirect/playback/928704584/rendition/1080p/file.mp4?loc=external&signature=1ed1ddd7e657cbf2c05f7b143c0dd86f091045b4a968a632d1c9975b60a25b85',
+      'https://player.vimeo.com/progressive_redirect/playback/949262535/rendition/1080p/file.mp4?loc=external&signature=e40ba77022845833df630bcf23a34bbb091d1005245073e4a1b42db6423faa75',
     eris: 'https://player.vimeo.com/progressive_redirect/playback/928702501/rendition/1080p/file.mp4?loc=external&signature=738cc14fa90bf5869bbc038bb709c1996847212972e67ecb315c0eb384914afd',
     theBookOfNouns:
       'https://player.vimeo.com/progressive_redirect/playback/945822381/rendition/1080p/file.mp4?loc=external&signature=03a29f61bd27eb4cfdd378fa2b5d29d17750bc3f672d7ddbc87fa9d11971d62e',

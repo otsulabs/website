@@ -43,6 +43,7 @@ const Content = () => {
         horizontal
         big
         video
+        videoThumbnail={siteContent.projectsPreview.eris}
         items={[siteContent.projectsVideo.eris]}
       />
       <Description title={'highlights'} />

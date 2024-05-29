@@ -42,6 +42,7 @@ const Content = () => {
         horizontal
         big
         video
+        videoThumbnail={siteContent.projectsPreview.theDopeShitTypeSlash}
         items={[siteContent.projectsVideo.theDopeShitTypeSlash]}
       />
       <Description title={'highlights'} />

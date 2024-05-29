@@ -8,7 +8,7 @@ import 'swiper/css/scrollbar';
 import { useEffect, useRef, useState } from 'react';
 
 const Gallery = {
-  Base: ({ withSpace, horizontal, items, big, video }) => {
+  Base: ({ withSpace, horizontal, items, big, video, videoThumbnail }) => {
     const isTablet = useMediaQuery('(max-width:991.98px)');
     const containerRef = useRef(null);
     const sliderScrollbarRef = useRef(null);
@@ -23,7 +23,7 @@ const Gallery = {
       >
         {horizontal &&
           items.map((item, index) => (
-            <Gallery.Horizontal key={index} video={video} src={item} />
+            <Gallery.Horizontal key={index} video={video} src={item} thumbnail={videoThumbnail} />
           ))}
         {!horizontal &&
           !isTablet &&
@@ -62,7 +62,7 @@ const Gallery = {
       </section>
     );
   },
-  Horizontal: ({ src, video }) => {
+  Horizontal: ({ src, video, thumbnail }) => {
     // const [fileType, setFileType] = useState(src.match(/\.([^.]+)$/)[1])
     const fileType = src.match(/\.([^.]+)$/)[1];
     const [isVideoPlay, stIsVideoPlay] = useState(false);
@@ -103,9 +103,9 @@ const Gallery = {
             </div>
           )}
           {video ? (
-            <video ref={videoRef} src={src} />
+            <video ref={videoRef} src={src} preload="none" poster={thumbnail} />
           ) : fileType === 'mp4' ? (
-            <video src={src} muted loop autoPlay playsInline />
+            <video src={src} poster={thumbnail} preload="none" muted loop autoPlay playsInline />
           ) : (
             <img src={src} alt='' />
           )}
