@@ -58,6 +58,7 @@ const Content = () => {
         horizontal
         big
         video
+        videoThumbnail={siteContent.projectsPreview.theBookOfNouns}
         items={[siteContent.projectsVideo.theBookOfNouns]}
       />
       <Description title={'Development'} />

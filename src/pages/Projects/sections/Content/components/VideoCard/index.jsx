@@ -45,6 +45,7 @@ const VideoCard = ({
             playsinline
             src={`${video}#t=0.1`}
             alt=''
+            poster={preview}
           />
         )}
         {img && <img src={img} alt='' />}

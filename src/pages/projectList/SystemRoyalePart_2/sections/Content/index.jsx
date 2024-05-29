@@ -60,6 +60,7 @@ const Content = () => {
         horizontal
         big
         video
+        videoThumbnail={siteContent.projectsPreview.systemRPart_2}
         items={[siteContent.projectsVideo.systemRPart_2]}
       />
       <Description title={'highlights'} />
