@@ -39,4 +39,10 @@
       font-size: rem(14);
     }
   }
+  &.small-margin-bottom {
+    margin-bottom: 0.5rem;
+  }
+  &.error + h6 {
+    color: #df1e1e;
+  }
 }

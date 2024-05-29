@@ -1,7 +1,7 @@
 import { useMediaQuery } from 'usehooks-ts';
 import ListTable from '../../../../components/ListTable';
 import style from './List.module.scss';
-import content from './content';
+import { jobs } from '../../../../jobs';
 
 const ListSection = () => {
   const colWidth = [460, 470];
@@ -12,10 +12,10 @@ const ListSection = () => {
       <ListTable.Base className={style.list__content}>
         {isMobile ? (
           <>
-            {content.map((item, index) => (
+            {jobs.map((item, index) => (
               <ListTable.Mobile
                 key={index}
-                to={'/careers/details'}
+                to={`/careers/${item.slug}`}
                 title={item.title}
                 text={item.text}
               />
@@ -27,15 +27,15 @@ const ListSection = () => {
               customColWidth={colWidth}
               headings={['Title', 'Team', 'Location']}
             />
-            {content.map((item, index) => (
+            {jobs.map((item, index) => (
               <ListTable.Row
                 key={index}
-                to={'/careers/details'}
+                to={`/careers/${item.slug}`}
                 customColWidth={colWidth}
               >
                 <ListTable.Item>{item.title}</ListTable.Item>
                 <ListTable.Item>{item.team}</ListTable.Item>
-                <ListTable.Item>{item.location}</ListTable.Item>
+                <ListTable.Item>{item.generallocation}</ListTable.Item>
               </ListTable.Row>
             ))}
           </>

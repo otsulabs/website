@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import style from './Button.module.scss';
+import Spinner from '../Spinner';
 
 const Button = ({
   title,
@@ -9,7 +10,7 @@ const Button = ({
   icon,
   href,
   onClick,
-  to,
+  to
 }) => {
   const cls = `
    ${style.button}  

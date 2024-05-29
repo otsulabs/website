@@ -9,6 +9,7 @@ const File = ({
   fileName,
   handleRemove,
   disabledInput,
+  accept,
 }) => {
   useEffect(() => {});
 
@@ -18,7 +19,7 @@ const File = ({
         <div className={style.file__remove} onClick={handleRemove}></div>
       )}
       <label>
-        <input onChange={onChange} ref={refEl} type='file' />
+        <input onChange={onChange} ref={refEl} accept={accept} type='file' />
         <div className={style.fileBody}>
           <div className={style.fileBody__icon}>
             <div className={style.circle}></div>

@@ -18,6 +18,7 @@ import SystemRoyalePart2 from './pages/projectList/SystemRoyalePart_2';
 import TheDopeShtTypeSlash from './pages/projectList/TheDopeShtTypeSlash';
 import Eris from './pages/projectList/Eris';
 import TheBookOfNouns from './pages/projectList/TheBookOfNouns';
+import ReactGA from 'react-ga4';
 
 const router = createBrowserRouter([
   {
@@ -41,7 +42,7 @@ const router = createBrowserRouter([
         element: <CareersPage />,
       },
       {
-        path: 'careers/details',
+        path: 'careers/:slug',
         element: <CareerDetailsPage />,
       },
       {
@@ -95,6 +96,14 @@ root.render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
+try {
+  setTimeout(_ => {
+    ReactGA
+    .initialize('G-ZJKT2KX4EK', {}) // https://github.com/codler/react-ga4?tab=readme-ov-file#reference
+  }, 4000); // added a try/catch (for preventing AddBlocker Crashes) and a setTimeout.
+} catch (err) {
+  console.error(err);
+}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
