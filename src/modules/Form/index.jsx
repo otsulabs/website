@@ -88,13 +88,18 @@ const Form = ({ className, type }) => {
           <Input
             placeholder={'Your Name'}
             name={'name'}
-            rules={{ required: true }}
+            rules={{ required: 'This field is required' }}
             error={methods.formState.errors.name}
             />
           <Input
             placeholder={'Your Email'}
             name={'email'}
-            rules={{ required: true }}
+            rules={{
+              required: 'This field is required',
+              validate: {
+                matchPattern: (v) =>/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(v) || 'Please write correct email address',
+              }
+            }}
             error={methods.formState.errors.email}
           />
         </div>

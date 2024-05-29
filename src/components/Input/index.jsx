@@ -19,7 +19,7 @@ const Input = ({ name, type = 'text', textarea, rules, error, ...props }) => {
         {...register(name, rules)}
         {...props}
       />
-      {error && <span className={style.error}>This field is required</span>}
+      {error && <span className={style.error}>{error.message}</span>}
     </label>
   );
 };
