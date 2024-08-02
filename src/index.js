@@ -18,6 +18,7 @@ import SystemRoyalePart2 from './pages/projectList/SystemRoyalePart_2';
 import TheDopeShtTypeSlash from './pages/projectList/TheDopeShtTypeSlash';
 import Eris from './pages/projectList/Eris';
 import TheBookOfNouns from './pages/projectList/TheBookOfNouns';
+import NovaTheraTheReckoning from './pages/projectList/NovaTheraTheReckoning';
 import ReactGA from 'react-ga4';
 
 const router = createBrowserRouter([
@@ -76,6 +77,10 @@ const router = createBrowserRouter([
       {
         path: 'projects/the_book_of_nouns',
         element: <TheBookOfNouns />,
+      },
+      {
+        path: 'projects/nova_thera_the_reckoning',
+        element: <NovaTheraTheReckoning />,
       },
       {
         path: 'contacts',
