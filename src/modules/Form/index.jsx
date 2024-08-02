@@ -5,7 +5,7 @@ import Title from '../../components/Title';
 import Input from '../../components/Input';
 import style from './Form.module.scss';
 import { useEffect, useRef, useState } from 'react';
-const baseUrl = process.env.API_URL || 'http://localhost:3000';
+const baseUrl = process.env.API_URL || 'https://otsulabs-serverless.vercel.app';
 
 const Form = ({ className, type }) => {
   const [fileName, setFileName] = useState(false);
