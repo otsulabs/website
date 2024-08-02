@@ -3,6 +3,21 @@ import { siteContent } from '../../../../content';
 const content = {
   cards: [
     {
+      preview: siteContent.projectsPreview.theBookOfNouns,
+      videoPreview: siteContent.projectsVideo360Quality.theBookOfNouns,
+      video: siteContent.projectsVideo.theBookOfNouns,
+      title: 'Nova Thera: The Reckoning',
+      user: 'Pixelmon',
+      userType: 'Сlient',
+      client: 'Not applicable',
+      type: 'Сlient',
+      services:
+        'Character Development and Design, Lore and World-building, Concept art, Background art, Script, Storyboard, Color Script, Full Production, Sound Design, Visual Effects.',
+      mobileDescription:
+        'Pixelmon  //  Character Development and Design, Lore and World-building, Concept art, Background art, Script, Storyboard, Color Script, Full Production, Sound Design, Visual Effects.',
+      to: '/projects/nova_thera_the_reckoning',
+    },
+    {
       preview: siteContent.projectsPreview.theWrathOfGods,
       videoPreview: siteContent.projectsVideo360Quality.theWrathOfGods,
       video: siteContent.projectsVideo.theWrathOfGods,
@@ -91,21 +106,6 @@ const content = {
       mobileDescription:
         'In-house  //  Character Design, Storyboard, Color Script, Full Production, Sound Design, Visual Effects.',
       to: '/projects/the_book_of_nouns',
-    },
-    {
-      preview: siteContent.projectsPreview.theBookOfNouns,
-      videoPreview: siteContent.projectsVideo360Quality.theBookOfNouns,
-      video: siteContent.projectsVideo.theBookOfNouns,
-      title: 'Nova Thera: The Reckoning',
-      user: 'Pixelmon',
-      userType: 'Сlient',
-      client: 'Not applicable',
-      type: 'Сlient',
-      services:
-        'Character Development and Design, Lore and World-building, Concept art, Background art, Script, Storyboard, Color Script, Full Production, Sound Design, Visual Effects.',
-      mobileDescription:
-        'Pixelmon  //  Character Development and Design, Lore and World-building, Concept art, Background art, Script, Storyboard, Color Script, Full Production, Sound Design, Visual Effects.',
-      to: '/projects/nova_thera_the_reckoning',
     },
   ],
 };
