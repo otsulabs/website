@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Text from '../../../../../../components/Text';
 import style from './VideoCard.module.scss';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const VideoCard = ({
   img,
@@ -14,11 +14,16 @@ const VideoCard = ({
   preview,
 }) => {
   const videoRef = useRef();
+  const [playing, setPlaying] = useState(false);
 
   const playVideo = () => {
-    videoRef.current.play();
+    if (!videoRef.current || !videoRef.current.paused || playing) return
+    videoRef.current.play().then(() => {
+    }).catch(function(error) {
+    });
   };
   const pauseVideo = () => {
+    if (!videoRef.current || videoRef.current.paused || !playing) return
     videoRef.current.pause();
     videoRef.current.currentTime = 1;
   };
@@ -26,6 +31,13 @@ const VideoCard = ({
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.currentTime = 1;
+      videoRef.current.onplaying = () => {
+        setPlaying(true);
+      }
+
+      videoRef.current.onpause = () => {
+        setPlaying(false);
+      }
     }
   }, []);
 

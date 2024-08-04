@@ -10,7 +10,7 @@ import style from './Projects.module.scss';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/scrollbar';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { siteContent } from '../../../../content';
@@ -39,6 +39,14 @@ const ProjectsSection = () => {
           className={style.projectsSlider}
           // slideActiveClass={style.active}
         >
+          <SwiperSlide className={style.projectsSlider__slide}>
+            <VideoCard
+              to={'projects/nova_thera_the_reckoning'}
+              preview={siteContent.projectsPreview.novaTheraTheReckoning}
+              video={siteContent.projectsVideo360Quality.novaTheraTheReckoning}
+              title={'Nova Thera: The Reckoning'}
+            />
+          </SwiperSlide>
           <SwiperSlide className={style.projectsSlider__slide}>
             <VideoCard
               to={'projects/the_wrath_of_gods'}
@@ -75,17 +83,31 @@ const ProjectsSection = () => {
 
 const VideoCard = ({ preview, video, title, to }) => {
   const videoRef = useRef();
+  const [playing, setPlaying] = useState(false);
 
   const playVideo = () => {
-    videoRef.current.play();
+    if (!videoRef.current || !videoRef.current.paused || playing) return
+    videoRef.current.play().then(() => {
+    }).catch(function(error) {
+    });
   };
   const pauseVideo = () => {
+    if (!videoRef.current || videoRef.current.paused || !playing) return
     videoRef.current.pause();
     videoRef.current.currentTime = 1;
   };
 
   useEffect(() => {
-    videoRef.current.currentTime = 1;
+    if (videoRef.current) {
+      videoRef.current.currentTime = 1;
+      videoRef.current.onplaying = () => {
+        setPlaying(true);
+      }
+
+      videoRef.current.onpause = () => {
+        setPlaying(false);
+      }
+    }
   }, []);
 
   return (

@@ -56,8 +56,8 @@ const FreelanceSection = () => {
               {/* <Title.H3 lowerCase> */}
               {/* <Title.Row> */}
               <LinkButton
-                title={'contact@otsulabs.com'}
-                href={`mailto:contact@otsulabs.com`}
+                title={'join@otsulabs.com'}
+                href={`mailto:join@otsulabs.com`}
                 lowerCase
                 xl
                 className={style.freelanceContent__bottomMail}

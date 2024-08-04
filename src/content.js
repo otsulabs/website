@@ -4,6 +4,7 @@ import preview3 from './pages/projectList/SystemRoyalePart_2/sections/Content/as
 import preview4 from './pages/projectList/TheDopeShtTypeSlash/sections/Content/assets/preview.jpg';
 import preview5 from './pages/projectList/Eris/sections/Content/assets/preview.jpg';
 import preview6 from './pages/projectList/TheBookOfNouns/sections/Content/assets/preview.jpg';
+import preview7 from './pages/projectList/NovaTheraTheReckoning/sections/Content/assets/preview.png';
 
 const mainInstagram = 'https://www.instagram.com/otsulabs/';
 const mainTwitter = 'https://twitter.com/OtsuLabs';
@@ -79,6 +80,7 @@ export const siteContent = {
     theDopeShitTypeSlash: preview4,
     systemRPart_1: preview2,
     systemRPart_2: preview3,
+    novaTheraTheReckoning: preview7
   },
   projectsVideo: {
     theWrathOfGods:
@@ -92,6 +94,8 @@ export const siteContent = {
       'https://player.vimeo.com/progressive_redirect/playback/928702422/rendition/720p/file.mp4?loc=external&signature=3122a40732e4fb9ed32ea39646f91943886a9d9ee39b83735e8a008d3b75b572',
     systemRPart_2:
       'https://player.vimeo.com/progressive_redirect/playback/928702374/rendition/1080p/file.mp4?loc=external&signature=f4143c3626fdf1578a73354b661e4f24933687e0c306845db43ec079ed72930f',
+    novaTheraTheReckoning:
+      'https://player.vimeo.com/progressive_redirect/playback/993871577/rendition/1080p/file.mp4?loc=external&signature=f187978ce33efd30eb87fda571e257e7f5db1153a89cc785389e6443e72456cd'
   },
   projectsVideo360Quality: {
     theWrathOfGods:
@@ -105,5 +109,7 @@ export const siteContent = {
       'https://player.vimeo.com/progressive_redirect/playback/948012177/rendition/360p/file.mp4?loc=external&signature=542b5d95d93904c05a026d9fbdb40bc8b13741ad83a6b9ded102ec5398b94656',
     systemRPart_2:
       'https://player.vimeo.com/progressive_redirect/playback/948012243/rendition/360p/file.mp4?loc=external&signature=e003a53a561cdb27375d53ef78f099568574d6106f19ecf7073b0d342e651239',
+    novaTheraTheReckoning:
+      'https://player.vimeo.com/progressive_redirect/playback/993871577/rendition/720p/file.mp4?loc=external&signature=ac92a788a2f6c36e0c43161f95c52d040bc3bf7ee75ef5ef6f4af55f3b016578'
   },
 };

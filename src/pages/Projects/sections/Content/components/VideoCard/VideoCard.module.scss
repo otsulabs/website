@@ -5,6 +5,7 @@
 .card {
   padding: rem(20);
   border: rem(1) solid cl(line-white);
+  box-sizing: border-box;
 
   @media (max-width: $tablet) {
     padding: rem(15);

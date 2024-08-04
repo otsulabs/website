@@ -24,6 +24,7 @@
     flex-wrap: wrap;
 
     &__item {
+      box-sizing: border-box;
       flex: 0 0 33.333%;
       border-bottom: none !important;
 
@@ -35,6 +36,15 @@
 
       &:not(:nth-child(3n + 1)) {
         border-left: none;
+      }
+
+      &:nth-child(3n + 2), &:nth-child(3n), &:nth-child(3n + 1) {
+        border-top: none !important;
+        border-bottom: rem(1) solid cl(line-white) !important;
+      }
+
+      &:nth-last-child(1) {
+        border-bottom: none !important;
       }
 
       @media (max-width: $tablet) {
