@@ -3,9 +3,9 @@ import { siteContent } from '../../../../content';
 const content = {
   cards: [
     {
-      preview: siteContent.projectsPreview.theBookOfNouns,
-      videoPreview: siteContent.projectsVideo360Quality.theBookOfNouns,
-      video: siteContent.projectsVideo.theBookOfNouns,
+      preview: siteContent.projectsPreview.novaTheraTheReckoning,
+      videoPreview: siteContent.projectsVideo360Quality.novaTheraTheReckoning,
+      video: siteContent.projectsVideo.novaTheraTheReckoning,
       title: 'Nova Thera: The Reckoning',
       user: 'Pixelmon',
       userType: 'Сlient',

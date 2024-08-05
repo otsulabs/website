@@ -103,7 +103,8 @@ const ContentSection = ({ job }) => {
         </Block.Col>
         <Block.Col>
           <Title.H4>
-            <Title.Row>Fill in the forms and we will contact you</Title.Row>
+            <Title.Row>Fill in the forms</Title.Row>
+            <Title.Row delay={800}>and we will contact you</Title.Row>
             <Form type={'career'} className={style.form} />
           </Title.H4>
         </Block.Col>
