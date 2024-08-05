@@ -52,10 +52,10 @@ const Title = {
       </h3>
     );
   },
-  Row: ({ children }) => {
+  Row: ({ children, delay = 0 }) => {
     return (
       <div className={style.row}>
-        <Fade up cascade duration={1000}>
+        <Fade up cascade duration={1000} delay={delay}>
           {children}
         </Fade>
       </div>
