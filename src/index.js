@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './scss/style.scss';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter, redirect } from 'react-router-dom';
 import HomePage from './pages/Home';
 import AboutPage from './pages/About';
 import CareersPage from './pages/Careers';
@@ -89,6 +89,10 @@ const router = createBrowserRouter([
       {
         path: 'privacy',
         element: <PrivacyPage />,
+      },
+      {
+        path: 'pitch',
+        loader: () => redirect("https://www.figma.com/deck/dPPNgb0llmvVDW3g8D6Asy")
       },
     ],
   },

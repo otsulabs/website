@@ -9,7 +9,7 @@ const content = {
       title: 'Nova Thera: The Reckoning',
       user: 'Pixelmon',
       userType: 'Сlient',
-      client: 'Not applicable',
+      client: 'Pixelmon',
       type: 'Сlient',
       services:
         'Character Development and Design, Lore and World-building, Concept art, Background art, Script, Storyboard, Color Script, Full Production, Sound Design, Visual Effects.',
@@ -24,7 +24,7 @@ const content = {
       title: 'The Wrath of Gods',
       user: 'Roolz',
       userType: 'Сlient',
-      client: 'Not applicable',
+      client: 'Roolz',
       type: 'Сlient',
       services:
         'Character Development and Design, Lore and World-building, Concept art, Background art, Script, Storyboard, Color Script, Full Production, Sound Design, Visual Effects.',
@@ -39,7 +39,7 @@ const content = {
       title: 'System Royale - Part 1',
       user: 'Zokio by VoyceMe',
       userType: 'Сlient',
-      client: 'Not applicable',
+      client: 'VoyceMe',
       type: 'Сlient',
       services:
         'Character Development and Design, Script, Concept art, Background art, Storyboard, Color Script, Full Production, Sound Design, Voice Acting, Visual Effects.',
@@ -54,7 +54,7 @@ const content = {
       title: 'System Royale - Part 2',
       user: 'Zokio by VoyceMe',
       userType: 'Сlient',
-      client: 'Not applicable',
+      client: 'VoyceMe',
       type: 'Сlient',
       services:
         'Character Development and Design, Script, Storyboard, Color Script, Full Production, Post-Production, Sound Design, Voice Acting, Visual Effects.',
@@ -69,7 +69,7 @@ const content = {
       title: 'The dope sh*t-type slash',
       user: 'Alex Hugh',
       userType: 'Сlient',
-      client: 'Not applicable',
+      client: 'Alex Hugh',
       type: 'Сlient',
       services:
         'Character Design, Background rendering, Storyboard, Color Script, Full Production, Sound Design, Visual Effects.',
@@ -84,7 +84,7 @@ const content = {
       title: 'Eris',
       user: 'Conviction',
       userType: 'Сlient',
-      client: 'Not applicable',
+      client: 'Conviction',
       type: 'Сlient',
       services:
         'Character Design, Storyboard, Color Script, Full Production, Sound Design, Visual Effects.',

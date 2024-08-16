@@ -51,7 +51,7 @@ const Content = () => {
         }
         client={'Pixelmon'}
         brief={
-          'An official Pixelmon anime trailer.'
+          'An official trailer for Pixelmon Anime Universe.'
         }
         scope={
           'Character Development and Design, Lore and World-building, Concept art, Background art, Script, Storyboard, Color Script, Full Production, Sound Design, Visual Effects.'
@@ -112,6 +112,10 @@ const Content = () => {
               value: 'Khoa Trinh',
             },
             {
+              title: 'Director:',
+              value: 'Erene, Huu Tu',
+            },
+            {
               title: 'Animation Director:',
               value: 'Huu Tu',
             },
@@ -132,19 +136,19 @@ const Content = () => {
               value: 'Longan, Thao Pham, Ngoc To, Khang Le, Thuy Do'
             },
             {
-              title: 'Post-Production Lead',
+              title: 'Compositing Lead',
               value: 'Phuc Huynh'
             },
             {
               title: 'Compositing',
               value: 'Phuc Huynh, Loc Nguyen'
             },
+          ],
+          [
             {
               title: 'Editing',
               value: 'Khoa Trinh, Lam Nguyen'
-            }
-          ],
-          [
+            },
             {
               title: 'Original drawings Supervisor:',
               value: 'Dennis, AJ',
@@ -167,13 +171,13 @@ const Content = () => {
                 'Julius de Belen, Raymond, Phuong Vo',
             },
             {
+              title: 'Music',
+              value: 'Jakub Pietras'
+            },
+            {
               title: 'Soundfx and master:',
               value: 'Jordan Wiberg (Emmy Award-winning Supervising Sound Editor)'
             },
-            {
-              title: 'Music',
-              value: 'Jakub Pietras'
-            }
           ],
         ]}
       />
