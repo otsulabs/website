@@ -166,8 +166,8 @@
   &.mainUnpacked {
     flex-grow: 999;
     display: flex;
-    border-left: none;
     @media (max-width: $tablet) {
+      border-left: none;
       flex-direction: column;
       > .row {
         display: flex;
