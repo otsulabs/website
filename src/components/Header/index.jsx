@@ -53,8 +53,8 @@ const Header = () => {
           <LinkButton
             onClick={() => handleMenu('close')}
             to={'careers'}
-            title={'Careers'}
-            pulse
+            title={'Join Us'}
+            // pulse
           />
           <LinkButton
             onClick={() => handleMenu('close')}

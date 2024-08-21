@@ -14,7 +14,7 @@ const MainSection = () => {
           <PageInfo.Row>
             <PageInfo.Col>
               <Text bold upperCase secondary>
-                <Title.Row>Careers</Title.Row>
+                <Title.Row>Join us</Title.Row>
               </Text>
             </PageInfo.Col>
             <PageInfo.Col>
@@ -33,6 +33,34 @@ const MainSection = () => {
                 )}
               </Title.H2>
             </PageInfo.Col>
+          </PageInfo.Row>
+          <PageInfo.Row noDivider>
+            <PageInfo.Col></PageInfo.Col>
+            <PageInfo.Col text>
+              <div className={style.col}>
+                <PageInfo.Text
+                  secondary
+                  inheritWith
+                  className={style.description}
+                >
+                  <p>We are a small team of passionate creators, constantly embracing challenges and venturing into the unknown.</p>
+                </PageInfo.Text>
+                <PageInfo.Text
+                  secondary
+                  className={style.description}
+                >
+                  <p>We live and breathe anime—creating it, watching it, and everything in between.</p>
+                </PageInfo.Text>
+                <PageInfo.Text
+                  secondary
+                  className={style.description}
+                >
+                  <p>We’re always eager to connect with new talent who share our passion for animation and art.</p>
+                </PageInfo.Text>
+              </div>
+            </PageInfo.Col>
+            <PageInfo.Col></PageInfo.Col>
+            <PageInfo.Col></PageInfo.Col>
           </PageInfo.Row>
         </PageInfo.Base>
       </div>

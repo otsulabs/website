@@ -15,6 +15,7 @@
       gap: rem(405);
 
       @media (max-width: $tablet) {
+        margin-bottom: rem(20);
         flex-direction: column;
         gap: rem(0);
       }
@@ -54,7 +55,7 @@
       padding: 0 rem(16) 0 rem(26);
 
       @media (max-width: $tablet) {
-        padding: rem(24) rem(80) rem(34) rem(40);
+        padding: rem(24) rem(90) rem(34) rem(30);
       }
 
       img,
@@ -72,7 +73,7 @@
 
 .col {
   flex: 1 1 rem(474);
-  padding: rem(62) rem(30) rem(200);
+  padding: rem(64) rem(24) rem(64);
 
   @media (max-width: $tablet) {
     flex: 0 0 auto;
@@ -93,6 +94,11 @@
     @media (max-width: $tablet) {
       flex: 0 0 auto;
     }
+  }
+
+  &.onlyBorderTop {
+    border: none;
+    border-top: rem(1) solid cl(line-white);
   }
 
   &.row {
@@ -145,7 +151,31 @@
 
       @media (max-width: $tablet) {
         margin: rem(16) 0 0;
+        font-size: rem(14);
         max-width: 100%;
+      }
+    }
+  }
+}
+
+.col, .row {
+  &.noPadding {
+    padding: 0;
+  }
+
+  &.mainUnpacked {
+    flex-grow: 999;
+    display: flex;
+    border-left: none;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      > .row {
+        display: flex;
+      }
+      &Item {
+        width: 50%;
+        flex: 1 1 auto;
+        border-top: none;
       }
     }
   }

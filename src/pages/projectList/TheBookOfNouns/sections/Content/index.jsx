@@ -52,15 +52,20 @@ const Content = () => {
         scope={
           'Character Design, Storyboard, Color Script, Full Production, Sound Design, Visual Effects.'
         }
+        video={isTablet ? [siteContent.projectsVideo.theBookOfNouns] : []}
+        videoThumbnail={isTablet ? siteContent.projectsPreview.theBookOfNouns : ''}
       />
-      <Gallery.Base
-        withSpace
-        horizontal
-        big
-        video
-        videoThumbnail={siteContent.projectsPreview.theBookOfNouns}
-        items={[siteContent.projectsVideo.theBookOfNouns]}
-      />
+      {
+        isTablet ? <></> :
+        <Gallery.Base
+          withSpace
+          horizontal
+          big
+          video
+          videoThumbnail={siteContent.projectsPreview.theBookOfNouns}
+          items={[siteContent.projectsVideo.theBookOfNouns]}
+        />
+      }
       <Description title={'Development'} />
       <Gallery.Base
         horizontal

@@ -56,15 +56,20 @@ const Content = () => {
         scope={
           'Character Development and Design, Lore and World-building, Concept art, Background art, Script, Storyboard, Color Script, Full Production, Sound Design, Visual Effects.'
         }
+        video={isTablet ? [siteContent.projectsVideo.novaTheraTheReckoning] : []}
+        videoThumbnail={isTablet ? siteContent.projectsPreview.novaTheraTheReckoning : ''}
       />
-      <Gallery.Base
-        withSpace
-        horizontal
-        big
-        video
-        videoThumbnail={siteContent.projectsPreview.novaTheraTheReckoning}
-        items={[siteContent.projectsVideo.novaTheraTheReckoning]}
-      />
+      {
+        isTablet ? <></> :
+        <Gallery.Base
+          withSpace
+          horizontal
+          big
+          video
+          videoThumbnail={siteContent.projectsPreview.novaTheraTheReckoning}
+          items={[siteContent.projectsVideo.novaTheraTheReckoning]}
+        />
+      }
       <Description title={'highlights'} />
       <Gallery.Base
         horizontal

@@ -50,54 +50,154 @@ const AboutSection = () => {
             <Title.Row upperCase>Otsu Labs Unpacked</Title.Row>
           </Text>
         </div>
-        <div className={style.col}>
-          <div className={style.row}>
-            <Title.Value>
-              <Title.Row>50M+</Title.Row>
-            </Title.Value>
-            <div className={style.row__label}>
-              <Title.Row>Views on social</Title.Row>
+        {
+          isTablet ?
+          <>
+            <div className={`${style.col} ${style.noPadding} ${style.mainUnpacked}`}>
+              <div className={`${style.row} ${style.noPadding}`}>
+                <div className={`${style.col} ${style.noPadding} ${style.mainUnpackedItem}`}>
+                  <div className={style.row}>
+                    <Title.Value>
+                      <Title.Row>50M+</Title.Row>
+                    </Title.Value>
+                    <div className={style.row__label}>
+                      <Title.Row>Views on social</Title.Row>
+                    </div>
+                    <Text className={style.row__text} secondary>
+                      Our work generated
+                      <br />
+                      50M+ views
+                      <br/>
+                      on social media.
+                    </Text>
+                  </div>
+                </div>
+                <div className={`${style.col} ${style.noPadding} ${style.mainUnpackedItem}`}>
+                  <div className={style.row}>
+                    <Title.Value>
+                      <Title.Row>40</Title.Row>
+                    </Title.Value>
+                    <div className={style.row__label}>
+                      <Title.Row>Creators</Title.Row>
+                    </div>
+                    <Text className={style.row__text} secondary>
+                      Our studio is home
+                      <br />
+                      to 40 talented
+                      <br/>
+                      in-house creators.
+                    </Text>
+                  </div>
+                </div>
+              </div>
+              <div className={`${style.row} ${style.noPadding}`}>
+                <div className={`${style.col} ${style.noPadding} ${style.mainUnpackedItem}`}>
+                  <div className={style.row}>
+                    <Title.Value>
+                      <Title.Row>2023</Title.Row>
+                    </Title.Value>
+                    <div className={style.row__label}>
+                      <Title.Row>Year</Title.Row>
+                    </div>
+                    <Text className={style.row__text} secondary>
+                      Born in 2023, Otsu
+                      <br />
+                      Labs is the new kid
+                      <br/>
+                      on the block.
+                    </Text>
+                  </div>
+                </div>
+                <div className={`${style.col} ${style.noPadding} ${style.mainUnpackedItem}`}>
+                  <div className={style.row}>
+                    <Title.Value>
+                      <Title.Row>180K+</Title.Row>
+                    </Title.Value>
+                    <div className={style.row__label}>
+                      <Title.Row>Followers</Title.Row>
+                    </div>
+                    <Text className={style.row__text} secondary>
+                      We've hit the 180k
+                      <br />
+                      with our internal
+                      <br/>
+                      projects' followers.
+                    </Text>
+                  </div>
+                </div>
+              </div>
             </div>
-            <Text className={style.row__text} secondary>
-              Our work has generated +50 million views on social media.
-            </Text>
-          </div>
-          <div className={style.row}>
-            <Title.Value>
-              <Title.Row>2023</Title.Row>
-            </Title.Value>
-            <div className={style.row__label}>
-              <Title.Row>Year</Title.Row>
+          </> :
+          <>
+            <div className={`${style.col} ${style.noPadding} ${style.mainUnpacked}`}>
+              <div className={`${style.col} ${style.noPadding} ${style.mainUnpackedItem}`}>
+                <div className={style.col}>
+                  <div className={style.row}>
+                    <Title.Value>
+                      <Title.Row>50M+</Title.Row>
+                    </Title.Value>
+                    <div className={style.row__label}>
+                      <Title.Row>Views on social</Title.Row>
+                    </div>
+                    <Text className={style.row__text} secondary>
+                      Our work generated 50M+
+                      <br/>
+                      views on social media.
+                    </Text>
+                  </div>
+                </div>
+                <div className={`${style.col} ${style.onlyBorderTop}`}>
+                  <div className={style.row}>
+                    <Title.Value>
+                      <Title.Row>2023</Title.Row>
+                    </Title.Value>
+                    <div className={style.row__label}>
+                      <Title.Row>Year</Title.Row>
+                    </div>
+                    <Text className={style.row__text} secondary>
+                      Born in 2023, Otsu Labs
+                      <br/>
+                      is the new kid on the block.
+                    </Text>
+                  </div>
+                </div>
+              </div>
+              <div className={`${style.col} ${style.noPadding} ${style.mainUnpackedItem}`}>
+                <div className={style.col}>
+                  <div className={style.row}>
+                    <Title.Value>
+                      <Title.Row>40</Title.Row>
+                    </Title.Value>
+                    <div className={style.row__label}>
+                      <Title.Row>Creators</Title.Row>
+                    </div>
+                    <Text className={style.row__text} secondary>
+                      Our studio is home to 40
+                      <br/>
+                      talented in-house creators.
+                    </Text>
+                  </div>
+                </div>
+                <div className={`${style.col} ${style.onlyBorderTop}`}>
+                  <div className={style.row}>
+                    <Title.Value>
+                      <Title.Row>180K+</Title.Row>
+                    </Title.Value>
+                    <div className={style.row__label}>
+                      <Title.Row>Followers</Title.Row>
+                    </div>
+                    <Text className={style.row__text} secondary>
+                      We've hit the 180k with our
+                      <br/>
+                      internal projects' followers.
+                    </Text>
+                  </div>
+                </div>
+              </div>
+
             </div>
-            <Text className={style.row__text} secondary>
-              Born in 2023, Otsu Labs is the new kid on the block.
-            </Text>
-          </div>
-        </div>
-        <div className={style.col}>
-          <div className={style.row}>
-            <Title.Value>
-              <Title.Row>30</Title.Row>
-            </Title.Value>
-            <div className={style.row__label}>
-              <Title.Row>Creators</Title.Row>
-            </div>
-            <Text className={style.row__text} secondary>
-              Our studio is home to 30 talented in-house creators.
-            </Text>
-          </div>
-          <div className={style.row}>
-            <Title.Value>
-              <Title.Row>100K+</Title.Row>
-            </Title.Value>
-            <div className={style.row__label}>
-              <Title.Row>Followers</Title.Row>
-            </div>
-            <Text className={style.row__text} secondary>
-              We've hit the 100k mark with our internal projects' followers.
-            </Text>
-          </div>
-        </div>
+          </>
+        }
         <div className={style.col}>
           <div className={style.cat}>
             {isSafari ? (

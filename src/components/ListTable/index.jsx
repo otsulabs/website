@@ -52,9 +52,15 @@ const ListTable = {
     return (
       <Link to={to} className={style.row}>
         <Text lg>{title}</Text>
-        <Text bold secondary>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <circle cx="14" cy="14" r="14" fill="#CFD538"/>
+            <path d="M9 13.5C8.72386 13.5 8.5 13.7239 8.5 14C8.5 14.2761 8.72386 14.5 9 14.5L9 13.5ZM18.3536 14.3536C18.5488 14.1583 18.5488 13.8417 18.3536 13.6464L15.1716 10.4645C14.9763 10.2692 14.6597 10.2692 14.4645 10.4645C14.2692 10.6597 14.2692 10.9763 14.4645 11.1716L17.2929 14L14.4645 16.8284C14.2692 17.0237 14.2692 17.3403 14.4645 17.5355C14.6597 17.7308 14.9763 17.7308 15.1716 17.5355L18.3536 14.3536ZM9 14.5L18 14.5L18 13.5L9 13.5L9 14.5Z" fill="white"/>
+          </svg>
+        </div>
+        {/* <Text bold secondary>
           {text}
-        </Text>
+        </Text> */}
       </Link>
     );
   },

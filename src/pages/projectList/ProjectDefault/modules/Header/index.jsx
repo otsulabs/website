@@ -1,12 +1,28 @@
 import Text from '../../../../../components/Text';
 import Title from '../../../../../components/Title';
 import style from './Header.module.scss';
+import Gallery from '../../../ProjectDefault/modules/Gallery';
+import { siteContent } from '../../../../../content';
 
-const PageHeader = ({ title, client, brief, scope }) => {
+const PageHeader = ({ title, client, brief, scope, video, videoThumbnail }) => {
+
   return (
     <div className={style.header}>
       <div className={style.headerCol}>
         <Title.H2 className={style.header__title}>{title}</Title.H2>
+        {
+          !video || !video.length ? <></> :
+          <Gallery.Base
+            withSpace
+            horizontal
+            big
+            noBorder
+            noPadding
+            video
+            videoThumbnail={videoThumbnail}
+            items={video}
+          />
+        }
         <div className={style.header__client}>
           <Text secondary>Client</Text>
           <Text lg bold>

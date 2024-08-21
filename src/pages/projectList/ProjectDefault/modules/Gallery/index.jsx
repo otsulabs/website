@@ -8,7 +8,7 @@ import 'swiper/css/scrollbar';
 import { useEffect, useRef, useState } from 'react';
 
 const Gallery = {
-  Base: ({ withSpace, horizontal, items, big, video, videoThumbnail }) => {
+  Base: ({ withSpace, horizontal, items, big, video, videoThumbnail, noBorder, noPadding }) => {
     const isTablet = useMediaQuery('(max-width:991.98px)');
     const containerRef = useRef(null);
     const sliderScrollbarRef = useRef(null);
@@ -19,6 +19,8 @@ const Gallery = {
         className={`${style.gallery} ${withSpace && style.withSpace} 
         ${horizontal && style.horizontal}
         ${horizontal && big && style.big}
+        ${noBorder && style.noBorder}
+        ${noPadding && style.noPadding}
         gallery-con `}
       >
         {horizontal &&

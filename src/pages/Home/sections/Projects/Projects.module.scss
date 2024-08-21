@@ -56,9 +56,12 @@
       z-index: 1;
       width: 100%;
       height: rem(620);
-
+      border-radius: rem(8);
+      overflow: hidden;
+      
       @media (max-width: $tablet) {
         height: rem(230);
+        border-radius: rem(5);
       }
 
       &Preview {

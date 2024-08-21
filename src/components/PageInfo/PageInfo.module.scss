@@ -19,7 +19,11 @@
       gap: rem(16);
     }
 
-    &:not(:first-child) {
+    .noDivider {
+      
+    }
+
+    &:not(:first-child):not(.noDivider) {
       position: relative;
 
       &::before {
@@ -83,6 +87,9 @@
           @media (max-width: $tablet) {
             flex: 0 0 auto;
           }
+        }
+        &.inheritWith {
+          flex-basis: inherit;
         }
       }
     }

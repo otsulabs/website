@@ -56,15 +56,20 @@ const Content = () => {
         scope={
           'Character Development and Design, Script, Concept art, Background art, Storyboard, Color Script, Full Production, Sound Design, Voice Acting, Visual Effects.'
         }
+        video={isTablet ? [siteContent.projectsVideo.systemRPart_1] : []}
+        videoThumbnail={isTablet ? siteContent.projectsPreview.systemRPart_1 : ''}
       />
-      <Gallery.Base
-        withSpace
-        horizontal
-        big
-        video
-        videoThumbnail={siteContent.projectsPreview.systemRPart_1}
-        items={[siteContent.projectsVideo.systemRPart_1]}
-      />
+      {
+        isTablet ? <></> :
+        <Gallery.Base
+          withSpace
+          horizontal
+          big
+          video
+          videoThumbnail={siteContent.projectsPreview.systemRPart_1}
+          items={[siteContent.projectsVideo.systemRPart_1]}
+        />
+      }
       <Description title={'highlights'} />
       <Gallery.Base
         horizontal

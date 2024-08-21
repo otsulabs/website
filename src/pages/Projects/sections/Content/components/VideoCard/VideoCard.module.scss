@@ -22,9 +22,12 @@
     position: relative;
     width: 100%;
     height: rem(330);
+    border-radius: 8px;
+    overflow: hidden;
 
     @media (max-width: $tablet) {
       height: rem(168);
+      border-radius: 4px;
     }
 
     img,

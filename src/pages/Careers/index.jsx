@@ -6,7 +6,7 @@ const CareersPage = () => {
   return (
     <>
       <MainSection />
-      <ListSection />
+      {/* <ListSection /> */}
       <FreelanceSection />
     </>
   );

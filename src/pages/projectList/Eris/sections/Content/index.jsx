@@ -37,15 +37,20 @@ const Content = () => {
         scope={
           'Character Design, Storyboard, Color Script, Full Production, Sound Design, Visual Effects.'
         }
+        video={isTablet ? [siteContent.projectsVideo.eris] : []}
+        videoThumbnail={isTablet ? siteContent.projectsPreview.eris : ''}
       />
-      <Gallery.Base
-        withSpace
-        horizontal
-        big
-        video
-        videoThumbnail={siteContent.projectsPreview.eris}
-        items={[siteContent.projectsVideo.eris]}
-      />
+      {
+        isTablet ? <></> :
+        <Gallery.Base
+          withSpace
+          horizontal
+          big
+          video
+          videoThumbnail={siteContent.projectsPreview.eris}
+          items={[siteContent.projectsVideo.eris]}
+        />
+      }
       <Description title={'highlights'} />
       <Gallery.Base
         horizontal

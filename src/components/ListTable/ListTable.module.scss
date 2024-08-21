@@ -12,7 +12,7 @@
 
     @media (max-width: $tablet) {
       padding: rem(20) rem(15);
-      flex-direction: column;
+      justify-content: space-between;
       gap: rem(6);
       border-top: rem(1) solid cl(line-white);
     }

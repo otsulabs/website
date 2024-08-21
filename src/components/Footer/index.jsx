@@ -35,9 +35,9 @@ const Footer = () => {
             <li>
               <LinkButton
                 white
-                title={'careers'}
+                title={'Join Us'}
                 to={'/careers'}
-                pulse
+                // pulse
                 sm={isMobile}
               />
             </li>

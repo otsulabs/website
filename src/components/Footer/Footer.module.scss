@@ -33,6 +33,7 @@
 
     @media (max-width: $tablet) {
       flex-direction: column;
+      border-top: none;
     }
 
     .col {

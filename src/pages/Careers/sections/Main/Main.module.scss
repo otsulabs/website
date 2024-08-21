@@ -8,4 +8,24 @@
   @media (max-width: $tablet) {
     margin: rem(60) 0 0;
   }
+
+  .mainBody {
+    gap: rem(24);
+    @media (max-width: $mobile) {
+      gap: rem(16);
+    }
+  }
+
+  .description {
+    width: rem(336);
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+    @media (max-width: $mobile) {
+      gap: rem(16);
+    }
+  }
 }

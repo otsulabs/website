@@ -2,9 +2,9 @@ import Text from '../../../../../components/Text';
 import Title from '../../../../../components/Title';
 import style from './Description.module.scss';
 
-const Description = ({ title, text }) => {
+const Description = ({ title, text, noMarginBottom }) => {
   return (
-    <section className={`${style.description} ${title && style.withTitle}`}>
+    <section className={`${style.description} ${title && style.withTitle} ${noMarginBottom && style.noMarginBottom}}`}>
       {title && <Title.H2>{title}</Title.H2>}
       <Text className={style.description__text} secondary>
         {text}

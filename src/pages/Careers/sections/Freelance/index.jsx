@@ -2,6 +2,8 @@ import Text from '../../../../components/Text';
 import Title from '../../../../components/Title';
 import style from './Freelance.module.scss';
 import img from './assets/img/img.png';
+import joinUsDesktop from './assets/img/join_us_desktop.png';
+import joinUsMobile from './assets/img/join_us_mobile.png';
 // import imgMin from './assets/img/min.jpg';
 // import imgBig from './assets/img/big.jpg';
 import { useMediaQuery } from 'usehooks-ts';
@@ -12,10 +14,10 @@ const FreelanceSection = () => {
 
   return (
     <section className={style.freelance}>
-      <div className='__container'>
+      <div className={`__container`}>
         <div className={style.freelanceBody}>
           <div className={style.freelanceContent}>
-            <Text secondary upperCase className={style.freelanceContent__label}>
+            {/* <Text secondary upperCase className={style.freelanceContent__label}>
               <Title.Row>freelance</Title.Row>
             </Text>
             <Title.H3 className={style.freelanceContent__title}>
@@ -31,7 +33,7 @@ const FreelanceSection = () => {
                   <Title.Row>network.</Title.Row>
                 </>
               )}
-            </Title.H3>
+            </Title.H3> */}
 
             {/* {isTablet && (
               <div className={style.freelanceImages}>
@@ -77,7 +79,7 @@ const FreelanceSection = () => {
             </div> */}
           {/* {!isTablet && ( */}
           <div className={style.freelanceImage}>
-            <img src={img} alt='' />
+            <img src={isTablet ? joinUsMobile : joinUsDesktop} alt='' />
           </div>
           {/* )} */}
         </div>

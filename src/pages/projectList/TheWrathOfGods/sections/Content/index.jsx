@@ -64,15 +64,20 @@ const Content = () => {
         scope={
           'Character Development and Design, Lore and World-building, Concept art, Background art, Script, Storyboard, Color Script, Full Production, Sound Design, Visual Effects.'
         }
+        video={isTablet ? [siteContent.projectsVideo.theWrathOfGods] : []}
+        videoThumbnail={isTablet ? siteContent.projectsPreview.theWrathOfGods : ''}
       />
-      <Gallery.Base
-        withSpace
-        horizontal
-        big
-        video
-        videoThumbnail={siteContent.projectsPreview.theWrathOfGods}
-        items={[siteContent.projectsVideo.theWrathOfGods]}
-      />
+      {
+        isTablet ? <></> :
+        <Gallery.Base
+          withSpace
+          horizontal
+          big
+          video
+          videoThumbnail={siteContent.projectsPreview.theWrathOfGods}
+          items={[siteContent.projectsVideo.theWrathOfGods]}
+        />
+      }
       <Description title={'highlights'} />
       <Gallery.Base
         horizontal

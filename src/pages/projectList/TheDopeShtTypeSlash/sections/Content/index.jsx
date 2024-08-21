@@ -36,15 +36,20 @@ const Content = () => {
         scope={
           'Character Design, Background rendering, Storyboard, Color Script, Full Production, Sound Design, Visual Effects.'
         }
+        video={isTablet ? [siteContent.projectsVideo.theDopeShitTypeSlash] : []}
+        videoThumbnail={isTablet ? siteContent.projectsPreview.theDopeShitTypeSlash : ''}
       />
-      <Gallery.Base
-        withSpace
-        horizontal
-        big
-        video
-        videoThumbnail={siteContent.projectsPreview.theDopeShitTypeSlash}
+      {
+        isTablet ? <></> :
+        <Gallery.Base
+          withSpace
+          horizontal
+          big
+          video
+          videoThumbnail={siteContent.projectsPreview.theDopeShitTypeSlash}
         items={[siteContent.projectsVideo.theDopeShitTypeSlash]}
-      />
+        />
+      }
       <Description title={'highlights'} />
       <Gallery.Base
         horizontal
