@@ -46,6 +46,7 @@
       flex-direction: column;
       gap: rem(30);
       flex: 0 0 50%;
+      padding-right: rem(20);
 
       @media (max-width: $tablet) {
         flex: 1 1 100%;
