@@ -5,7 +5,7 @@ import Title from '../../components/Title';
 import Input from '../../components/Input';
 import style from './Form.module.scss';
 import { useEffect, useRef, useState } from 'react';
-const baseUrl = process.env.API_URL || 'https://otsulabs-serverless.vercel.app';
+// const baseUrl = process.env.API_URL || 'https://otsulabs-serverless.vercel.app';
 
 const Form = ({ className, type }) => {
   const [fileName, setFileName] = useState(false);
@@ -17,6 +17,7 @@ const Form = ({ className, type }) => {
   const fileInputRef = useRef();
   const methods = useForm();
   const onSubmit = async (data) => {
+    return;
     if (!type || isSent) return
 
     const formData = new FormData();
@@ -26,28 +27,28 @@ const Form = ({ className, type }) => {
     formData.append('message', data.message);
     formData.append('attachment', fileInputRef.current.files[0]);
     setLoading(true);
-    fetch(`${baseUrl}/contact`, {
-      method: 'POST',
-      body: formData,
-    }).then(async (response) => {
-      const responseParsed = await response.json();
-      if (responseParsed.success) {
-        setIsSent(true);
-        setTimeout(() => {
-          setIsSent(false);
-        }, 2000);
-        removeFileInput();
-        methods.reset();
-        return;
-      }
-      return Promise.reject(responseParsed.message);
-    })
-    .catch((error) => {
-      setError(error);
-    })
-    .finally(() => {
-      setLoading(false);
-    });
+    // fetch(`${baseUrl}/contact`, {
+    //   method: 'POST',
+    //   body: formData,
+    // }).then(async (response) => {
+    //   const responseParsed = await response.json();
+    //   if (responseParsed.success) {
+    //     setIsSent(true);
+    //     setTimeout(() => {
+    //       setIsSent(false);
+    //     }, 2000);
+    //     removeFileInput();
+    //     methods.reset();
+    //     return;
+    //   }
+    //   return Promise.reject(responseParsed.message);
+    // })
+    // .catch((error) => {
+    //   setError(error);
+    // })
+    // .finally(() => {
+    //   setLoading(false);
+    // });
   };
 
   const [disabledInput, setDisabledInput] = useState(false);
